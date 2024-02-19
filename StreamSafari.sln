@@ -5,6 +5,14 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSafari.Web", "StreamSafari.Web\StreamSafari.Web.csproj", "{FB94CE3C-BC84-44E7-97A6-786A521C2C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSafari.Model", "StreamSafari.Model\StreamSafari.Model.csproj", "{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSafari.Repository", "StreamSafari.Repository\StreamSafari.Repository.csproj", "{8978E732-B74D-49F6-80B0-44A245CAA747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSafari.Service", "StreamSafari.Service\StreamSafari.Service.csproj", "{17B1F246-9929-49B5-A48D-389E7D87986A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSafari.ViewModel", "StreamSafari.ViewModel\StreamSafari.ViewModel.csproj", "{86F37250-358C-4B15-A276-B90D42C0E3E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{FB94CE3C-BC84-44E7-97A6-786A521C2C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB94CE3C-BC84-44E7-97A6-786A521C2C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB94CE3C-BC84-44E7-97A6-786A521C2C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8978E732-B74D-49F6-80B0-44A245CAA747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8978E732-B74D-49F6-80B0-44A245CAA747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8978E732-B74D-49F6-80B0-44A245CAA747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8978E732-B74D-49F6-80B0-44A245CAA747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B1F246-9929-49B5-A48D-389E7D87986A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B1F246-9929-49B5-A48D-389E7D87986A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B1F246-9929-49B5-A48D-389E7D87986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B1F246-9929-49B5-A48D-389E7D87986A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F37250-358C-4B15-A276-B90D42C0E3E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F37250-358C-4B15-A276-B90D42C0E3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F37250-358C-4B15-A276-B90D42C0E3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F37250-358C-4B15-A276-B90D42C0E3E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
