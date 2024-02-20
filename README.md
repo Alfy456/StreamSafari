@@ -1,4 +1,5 @@
 Stream Safari 
+
 It's the application to show the list of movies.Also, the user can edit and search the particular movies.
 Moreover it can import th movie files to the Sql Server and get the data. It uses the Movie web Api to display the list of Movies.
 
