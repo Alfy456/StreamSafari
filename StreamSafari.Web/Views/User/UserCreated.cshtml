@@ -1,12 +1,59 @@
-﻿@model StreamSafari.ViewModel.ViewModels.UserViewModel
+﻿@model IEnumerable < StreamSafari.ViewModel.ViewModels.UserViewModel>
 @{
     ViewBag.Title = "UserCreated";
 }
 
-<h2>UserCreated</h2>
 
-<div class="col-md-10">
-    @Html.DisplayFor(m => m.UserName, "User is Created Successfully")
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.UserName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.UserRole)
+        </th>
+        <th></th>
+    </tr>
    
-</div>
+    @foreach (var users in Model)
+    {
+        <tr>
+            @if (users == Model.FirstOrDefault())
+            {
+                <td>
+                    <strong>@users.UserName</strong>
+                </td>
+                <td>
+                    @Html.DisplayFor(m => users.UserRole)
+                </td>
+
+
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(m => users.UserName)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(m => users.UserRole)
+                </td>
+
+
+            }
+
+
+
+            <td>
+                @Html.ActionLink("Edit", "EditUSer", new { id = users.UserId })
+                @Html.ActionLink("Delete", "Delete", new { id = users.UserId })
+            </td>
+        </tr>
+      
+    }
+</table>
+
+
+
 

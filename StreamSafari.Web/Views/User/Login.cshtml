@@ -2,18 +2,19 @@
 @model StreamSafari.ViewModel.ViewModels.UserViewModel
 
 @{
-  
-  Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "CreateUser";
-    bool IsUserAvailable = ViewBag.IsUserNameAvailable ?? false;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+    bool IsUserNotCreated = ViewBag.IsUserNotCreated ?? false;
 
 }
 
-<h4>CreateUser</h4>
+<h4>Login</h4>
 
-@using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
+@using (Html.BeginForm(Html.BeginForm("Login", "User", FormMethod.Post)))
+{
+    @Html.HiddenFor(m => m.UserId)
+    @Html.AntiForgeryToken()
 <div class="form-horizontal">
     <div class="form-group">
         <div class="col-md-10">
@@ -28,28 +29,25 @@
             @Html.PasswordFor(m => m.Password)
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-10">
-            @Html.LabelFor(m => m.UserRole)
-            @Html.CheckBoxFor(m => m.UserRole)
-        </div>
-    </div>
+
 
     <div class="form-group">
         <div class="col-md-10">
-            <input type="submit" value="Create" />
+
+            <input type="submit" value="Login" />
         </div>
 
-    </div>
-    @Html.ActionLink("Login", "Login")
 
-    @if (IsUserAvailable)
+    </div>
+    @Html.ActionLink("Create", "CreateUser")
+
+    @if (IsUserNotCreated)
     {
         <div class="col-md-10">
-            @Html.Label("UserName Exists")
+            @Html.Label("User Not Created")
         </div>
     }
 
 </div>
-            }
+}
 

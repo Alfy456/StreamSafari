@@ -1,0 +1,41 @@
+﻿@model StreamSafari.ViewModel.ViewModels.UserViewModel
+@{
+
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you Sure you want to Delete this User?</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRole)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("DeleteConfirmed", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.UserId)
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Delete" />
+            </div>
+        </div>
+
+    }
+</div>

@@ -1,0 +1,34 @@
+﻿@model StreamSafari.ViewModel.ViewModels.UserViewModel
+@{
+   
+    ViewBag.Title = "Edit";
+}
+
+<h2>EditUser</h2>
+
+@using (Html.BeginForm("Edit", "User",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.UserId)
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.LabelFor(m => m.UserName)
+                @Html.EditorFor(m => m.UserName)
+            </div>
+            <div class="col-md-10">
+                @Html.LabelFor(m => m.UserRole)
+                @Html.EditorFor(m => m.UserRole)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Save" />
+            </div>
+        </div>
+       
+
+    </div>
+}
