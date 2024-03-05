@@ -8,12 +8,12 @@
     bool IsUserNotCreated = ViewBag.IsUserNotCreated ?? false;
 
 }
-
+<hr />
 <h4>Login</h4>
 
 @using (Html.BeginForm(Html.BeginForm("Login", "User", FormMethod.Post)))
 {
-    @Html.HiddenFor(m => m.UserId)
+    @*@Html.HiddenFor(m => m.UserId)*@
     @Html.AntiForgeryToken()
 <div class="form-horizontal">
     <div class="form-group">

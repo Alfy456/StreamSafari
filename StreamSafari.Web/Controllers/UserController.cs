@@ -138,13 +138,14 @@ namespace StreamSafari.Web.Controllers
                 {
                     return View("LoginDetails", p_userViewModel);
                 }
-               
+                else
+                {
+
+                    ViewBag.IsUserNotCreated = true;
+                    return View("Login");
+                }
             }
-            else
-            {
-                ViewBag.IsUserNotCreated = true;
-                return View("Login");
-            }
+           
 
             return View(p_userViewModel);
            
