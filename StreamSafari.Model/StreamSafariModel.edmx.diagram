@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b62c571aa5ca46b39c0a73b6c532b515" Name="Diagram1">
         <EntityTypeShape EntityType="StreamSafariModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StreamSafariModel.Movie" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
