@@ -1,0 +1,40 @@
+﻿@model StreamSafari.ViewModel.ViewModels.JobViewModel
+@{
+
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you Sure you want to Delete this Job?</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(m => m.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(m => m.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(m => m.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(m => m.Status)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("DeleteConfirmed", "Job", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.JobId)
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Delete" />
+            </div>
+        </div>
+
+    }
+</div>

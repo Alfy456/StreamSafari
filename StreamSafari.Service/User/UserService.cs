@@ -1,4 +1,4 @@
-﻿using StreamSafari.Model;
+﻿
 using StreamSafari.ViewModel;
 using StreamSafari.Repository;
 using System;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StreamSafari.ViewModel.ViewModels;
+using StreamSafari.Model;
 
 namespace StreamSafari.Service
 {

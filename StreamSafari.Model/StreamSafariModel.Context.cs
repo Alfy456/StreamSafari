@@ -26,5 +26,7 @@ namespace StreamSafari.Model
         }
     
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
     }
 }

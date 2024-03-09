@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StreamSafari.ViewModel.ViewModels.MovieViewModel>
+@{
+    ViewBag.Title = "Movies";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Language)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var movies in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(m => movies.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(m => movies.Language)
+            </td>
+
+           
+        </tr>
+
+    }
+</table>
+
+
+
+

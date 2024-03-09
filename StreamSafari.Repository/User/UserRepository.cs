@@ -1,4 +1,5 @@
-﻿using StreamSafari.Model;
+﻿
+using StreamSafari.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
