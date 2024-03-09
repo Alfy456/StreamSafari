@@ -1,4 +1,4 @@
-﻿using StreamSafari.Service;
+﻿ using StreamSafari.Service;
 using StreamSafari.ViewModel.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -84,6 +84,7 @@ namespace StreamSafari.Web.Controllers
                 List<UserViewModel> userViewModels = userService.ListUsers();
                 return View("UserCreated", userViewModels);
             }
+           
               
             return View("EditUser");
         }

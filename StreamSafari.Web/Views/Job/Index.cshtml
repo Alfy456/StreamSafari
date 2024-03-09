@@ -1,0 +1,73 @@
+﻿@model IEnumerable<StreamSafari.ViewModel.ViewModels.JobViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Status)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.CreatedWhen)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.UpdatedWhen)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var jobs in Model)
+    {
+        <tr>
+            @if (jobs == Model.FirstOrDefault())
+            {
+                <td>
+                    <strong>@jobs.Name</strong>
+                </td>
+                <td>
+                    <a href="@Url.Action("Run","Job")"> @Html.DisplayFor(m => jobs.Status)</a>
+                
+                </td>
+                <td>
+                    @Html.DisplayFor(m => jobs.CreatedWhen)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => jobs.UpdatedWhen)
+                </td>
+
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(m => jobs.Name)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(m => jobs.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => jobs.CreatedWhen)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => jobs.UpdatedWhen)
+                </td>
+
+
+            }
+
+        </tr>
+
+    }
+</table>
+
+
+
+
