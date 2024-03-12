@@ -28,5 +28,11 @@ namespace StreamSafari.Repository
             }
         }
 
+        public List<Movie> searchMovie(string searchString)
+        {
+            List<Movie> movies = db.Movies.Where(m => m.Name == searchString).ToList();
+            return movies;
+        }
+
     }
 }

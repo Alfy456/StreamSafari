@@ -1,17 +1,25 @@
-﻿@model IEnumerable<StreamSafari.ViewModel.ViewModels.MovieViewModel>
+﻿@model PagedList.IPagedList<StreamSafari.ViewModel.ViewModels.MovieViewModel>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" ,rel="stylesheet" ,type="text/css" />
 @{
     ViewBag.Title = "Movies";
 }
 
-
+@using (Html.BeginForm(FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(m => m.Name)
+            @Html.ActionLink("Name","Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
 
         <th>
-            @Html.DisplayNameFor(m => m.Language)
+            @Html.ActionLink("Language", "Index", new { sortOrder = ViewBag.LanguageSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
 
 
@@ -29,11 +37,16 @@
                 @Html.DisplayFor(m => movies.Language)
             </td>
 
-           
+
         </tr>
 
     }
 </table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
 
 

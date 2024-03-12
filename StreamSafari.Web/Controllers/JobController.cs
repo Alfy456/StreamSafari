@@ -15,8 +15,6 @@ namespace StreamSafari.Web.Controllers
         MovieService movieService = new MovieService();
         MovieController objMovieController = new MovieController();
 
-
-       
         public ActionResult Index()
         {
             List<JobViewModel> jobs = jobService.ListJob();
