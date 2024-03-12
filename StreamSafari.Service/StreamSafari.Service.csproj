@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StreamSafari.Mapper\StreamSafari.Mapper.csproj">
+      <Project>{230B820F-D2C1-4364-82B0-F1E0DABD303E}</Project>
+      <Name>StreamSafari.Mapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StreamSafari.Model\StreamSafari.Model.csproj">
       <Project>{61EE13A4-2BC6-41AE-9F4F-8883AE5D442C}</Project>
       <Name>StreamSafari.Model</Name>

@@ -8,6 +8,9 @@ namespace StreamSafari.ViewModel.ViewModels
 {
     public class MovieViewModel
     {
+
+     
+
         public int Id { get; set; }
         public Nullable<int> MovieId { get; set; }
         public string Name { get; set; }

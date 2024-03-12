@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.CodeDom.Compiler;
+using StreamSafari.Mapper;
 
 namespace StreamSafari.Service
 {
     public class MovieService
     {
         MovieRepository movieRepository = new MovieRepository();
+        MovieMapper movieMapper = new MovieMapper();
 
       
 
@@ -72,6 +74,13 @@ namespace StreamSafari.Service
             movieRepository.InsertMovies(movies);
         }
       
+        public List<MovieViewModel> searchMovie(string searchString)
+        {
+            List<Movie> movies = movieRepository.searchMovie(searchString);
+            List<MovieViewModel> movieList = movieMapper.EnitityToMovieViewModel(movies);
+            return movieList;
 
+
+        }
     }
 }
